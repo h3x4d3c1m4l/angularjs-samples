@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AngularJS 1.x sample page</title>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script src="sample.js"></script>
+</head>
+<body ng-app="sampleapp" ng-controller="samplecontroller">
+<h1>AngularJS 1.x samples</h1>
+
+<h2>Sample 01 - Simple binding</h1>
+<input type="text" ng-model="sample01input">
+<p>Your input: {{sample01input}}</p>
+<hr>
+
+<h2>Sample 02 - Button click</h2>
+<button ng-click="sample02clicked()">Click me!</button>
+<hr>
+
+<h2>Sample 03 - Check input</h2>
+<input type="password" ng-model="sample03input" ng-init="sample03input = ''">
+<p ng-show="sample03input.length == 0">That's not helping to keep your secrets safe, please enter a password</p>
+<p ng-show="sample03input.length > 0 && sample03input.length < 10">Well you did enter something, but choose something a little longer</p>
+<p ng-show="sample03input.length >= 10">Good boy!</p>
+
+</body>
+</html>
