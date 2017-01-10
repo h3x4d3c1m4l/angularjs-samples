@@ -19,11 +19,19 @@ src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></s
 <button ng-click="sample02clicked()">Click me!</button>
 <hr>
 
-<h2>Sample 03 - Check input</h2>
-<input type="password" ng-model="sample03input" ng-init="sample03input = ''">
-<p ng-show="sample03input.length == 0">That's not helping to keep your secrets safe, please enter a password</p>
-<p ng-show="sample03input.length > 0 && sample03input.length < 10">Well you did enter something, but choose something a little longer</p>
-<p ng-show="sample03input.length >= 10">Good boy!</p>
+<h2>Sample 03.1 - Check input (ng-show)</h2>
+<input type="password" ng-model="sample03input1" ng-init="sample03input1 = ''">
+<p ng-show="sample03input1.length == 0">That's not helping to keep your secrets safe, please enter a password</p>
+<p ng-show="sample03input1.length > 0 && sample03input1.length < 10">Well you did enter something, but choose something a little longer</p>
+<p ng-show="sample03input1.length >= 10">Good boy!</p>
+<h2>Sample 03.2 - Check input (ng-if)</h2>
+<input type="password" ng-model="sample03input2" ng-init="sample03input2 = ''">
+<p ng-if="sample03input2.length == 0">That's not helping to keep your secrets safe, please enter a password</p>
+<p ng-if="sample03input2.length > 0 && sample03input2.length < 10">Well you did enter something, but choose something a little longer</p>
+<p ng-if="sample03input2.length >= 10">Good boy!</p>
+<br>
+<p>Try pressing F12 to open your browser's development tools, then navigate to these elements. Notice the difference between the elements hidden using ng-show and the elements hidden using ng-if?</p>
+<hr>
 
 </body>
 </html>
